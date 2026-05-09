@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { store } from '@/store'
 import AppLayout from '@/components/AppLayout'
 import Dashboard from '@/pages/Dashboard'
+import TaskList from '@/pages/TaskList'
 import './index.css'
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Dashboard />} />
+            <Route path="tasks" element={<TaskList />} />
           </Route>
         </Routes>
       </BrowserRouter>
