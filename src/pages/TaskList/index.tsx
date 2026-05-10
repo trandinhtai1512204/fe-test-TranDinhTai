@@ -15,6 +15,7 @@ import {
 import type { Task, TaskStatus } from '@/types/task'
 import type { RootState } from '@/store'
 import TaskModal from '@/components/TaskModal'
+import SearchFilter from '@/components/SearchFilter'
 
 const statusOptions: { label: string; value: TaskStatus }[] = [
   { label: 'Todo', value: 'todo' },
@@ -170,6 +171,7 @@ export default function TaskList() {
 
   return (
     <div className="p-6">
+      <SearchFilter />
       {selectedRowKeys.length > 0 && (
         <div className="mb-3 flex items-center gap-3">
           <span className="text-gray-600">{selectedRowKeys.length} task(s) selected</span>
